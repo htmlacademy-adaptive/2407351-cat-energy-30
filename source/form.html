@@ -5,11 +5,16 @@
   <meta charset="UTF-8">
   <title>Название проекта</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
+
   <!-- Шапка сайта -->
   <header class="main-header">
     <div class="main-header__wrapper">
@@ -51,18 +56,18 @@
         <form class="form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="form__group form__group--cat-info blank">
             <legend class="blank__title visually-hidden">Основная информация о питомце</legend>
-              <label class="blank__row">
-                Имя:*
-                <input class="blank__input input-text" type="text" name="cat-name" value="Барсик" required>
-              </label>
-              <label class="blank__row">
-                Вес(кг):*
-                <input class="blank__input input-text" type="number" name="cat-weight" value="7" required>
-              </label>
-              <label class="blank__row">
-                Возраст (лет):
-                <input class="blank__input input-text" type="number" name="cat-age" value="7">
-              </label>
+            <label class="blank__row">
+              Имя:*
+              <input class="blank__input input-text" type="text" name="cat-name" value="Барсик" required>
+            </label>
+            <label class="blank__row">
+              Вес(кг):*
+              <input class="blank__input input-text" type="number" name="cat-weight" value="7" required>
+            </label>
+            <label class="blank__row">
+              Возраст (лет):
+              <input class="blank__input input-text" type="number" name="cat-age" value="7">
+            </label>
           </fieldset>
 
           <fieldset class="form__group form__group--purpose blank">
@@ -94,19 +99,19 @@
 
           <fieldset class="form__group form__group--owner-info blank">
             <legend class="blank__title">Контактные данные (владельца кота)</legend>
-              <label class="blank__row">
-                E-mail:*
-                <input class="blank__input input-text" type="email" name="email" value="кuklachev@gmail.com" required>
-              </label>
-              <label class="blank__row">
-                Телефон:*
-                <input class="blank__input input-text" type="tel" name="phone-number" value="8 (960) 900-60-90" required>
-              </label>
+            <label class="blank__row">
+              E-mail:*
+              <input class="blank__input input-text" type="email" name="email" value="кuklachev@gmail.com" required>
+            </label>
+            <label class="blank__row">
+              Телефон:*
+              <input class="blank__input input-text" type="tel" name="phone-number" value="8 (960) 900-60-90" required>
+            </label>
           </fieldset>
 
           <fieldset class="form__group form__group--owner-info blank">
             <legend class="blank__title">Комментарий</legend>
-              <textarea class="blank__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="blank__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <fieldset class="form__group form__group--purpose blank">
@@ -197,6 +202,7 @@
     </div>
   </footer>
   <!-- Подвал сайта -->
+
 </body>
 
 </html>
