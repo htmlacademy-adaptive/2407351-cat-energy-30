@@ -1,7 +1,36 @@
 /* GLOBAL */
 @import "./global/variables.scss";
-@import "./global/global.scss";
 @import "./global/fonts.scss";
+@import "./global/global.scss";
+@import "./global/visually-hidden.scss";
 
 /* BLOCKS */
+@import "./blocks/page.scss";
 @import "./blocks/header.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/button.scss";
+@import "./blocks/button-burger.scss";
+@import "./blocks/main-container.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/purpose.scss";
+@import "./blocks/description.scss";
+@import "./blocks/instruction.scss";
+@import "./blocks/example.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/social.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/basic.scss";
+@import "./blocks/product.scss";
+@import "./blocks/products-more.scss";
+@import "./blocks/selection.scss";
+@import "./blocks/form.scss";
+@import "./blocks/blank.scss";
+@import "./blocks/input-text.scss";
+@import "./blocks/control.scss";
+@import "./blocks/input-control.scss";
+@import "./blocks/input-checkbox.scss";
