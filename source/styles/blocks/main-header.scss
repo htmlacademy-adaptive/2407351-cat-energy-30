@@ -1,0 +1,14 @@
+.main-header {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.main-header__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  margin-top: 65px;
+  z-index: -1;
+}

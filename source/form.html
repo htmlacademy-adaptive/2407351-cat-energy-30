@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Название проекта</title>
+  <title>Подбор программы</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
@@ -16,33 +16,41 @@
 <body class="page__body">
 
   <!-- Шапка сайта -->
-  <header class="main-header">
-    <div class="main-header__wrapper">
-      <a class="main-header__logo logo" href="index.html">
-        <img class="logo__image logo__image--icon" src="#" width="33" height="38" alt="Логотип Cat Energy.">
-        <img class="logo__image logo__image--text" src="#" width="101" height="18" alt="Cat Energy.">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle button-burger" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог
-                продукции</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--current" href="form.html" aria-current="page">Подбор
-                программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+  <div class="main-header__wrapper">
+    <a class="main-header__logo logo" href="index.html" aria-current="page">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-pic-desktop.svg" width="70" height="59">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-pic-tablet.svg" width="60" height="50">
+        <img src="images/logo-pic-phone.svg" width="33" height="38" alt="Иконка логотипа.">
+      </picture>
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg" width="118" height="21">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-text-tablet.svg" width="101" height="18">
+        <img src="images/logo-text-phone.svg" width="101" height="18" alt="Cat Energy.">
+      </picture>
+    </a>
+  </div>
+  <nav class="main-nav main-nav-is-closed">
+    <button class="main-nav__toggle button-burger" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="index.html">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">Каталог
+            продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current" href="form.html" aria-current="page">Подбор
+            программы</a>
+        </li>
+      </ul>
     </div>
+  </nav>
+  </div>
   </header>
   <!-- Шапка сайта -->
 
@@ -50,7 +58,7 @@
   <main class="main-container">
     <section class="selection">
       <div class="selection__wrapper">
-        <h1 class="selection__title">Подбор программы</h1>
+        <h1 class="selection__title title">Подбор программы</h1>
         <p class="selection__description">Заполните анкету, и мы подберем
           программу питания для вашего кота</p>
         <form class="form" action="https://echo.htmlacademy.ru/" method="get">
@@ -76,21 +84,21 @@
               <li class="blank__item">
                 <label class="blank__control control">
                   <input class="control__input visually-hidden" type="radio" name="purpose" value="weight-loss" checked>
-                  <span class="control__mark input-control"></span>
+                  <span class="control__mark"></span>
                   <span class="control__label">Похудение</span>
                 </label>
               </li>
               <li class="blank__item">
                 <label class="blank__control control">
                   <input class="control__input visually-hidden" type="radio" name="purpose" value="weight-gain">
-                  <span class="control__mark input-control"></span>
+                  <span class="control__mark"></span>
                   <span class="control__label">Набор массы</span>
                 </label>
               </li>
               <li class="blank__item">
                 <label class="blank__control control">
                   <input class="control__input visually-hidden" type="radio" name="purpose" value="advice">
-                  <span class="control__mark input-control"></span>
+                  <span class="control__mark"></span>
                   <span class="control__label">Не знаю (нужен ваш совет)</span>
                 </label>
               </li>
@@ -98,7 +106,7 @@
           </fieldset>
 
           <fieldset class="form__group form__group--owner-info blank">
-            <legend class="blank__title">Контактные данные (владельца кота)</legend>
+            <legend class="blank__title title">Контактные данные (владельца кота)</legend>
             <label class="blank__row">
               E-mail:*
               <input class="blank__input input-text" type="email" name="email" value="кuklachev@gmail.com" required>
@@ -110,12 +118,12 @@
           </fieldset>
 
           <fieldset class="form__group form__group--owner-info blank">
-            <legend class="blank__title">Комментарий</legend>
+            <legend class="blank__title title">Комментарий</legend>
             <textarea class="blank__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <fieldset class="form__group form__group--purpose blank">
-            <legend class="blank__title">Дополнительно</legend>
+            <legend class="blank__title title">Дополнительно</legend>
             <ul class="blank__list">
               <li class="blank__item">
                 <label class="blank__control control">
@@ -147,8 +155,8 @@
               </li>
             </ul>
           </fieldset>
-          <button class="form__button button" type="submit">Отправить заявку</button>
-          <span class="form__warning">* — Обязательные поля</span>
+          <button class="form__button button button--primary" type="submit">Отправить заявку</button>
+          <p class="form__warning">* — Обязательные поля</p>
         </form>
       </div>
     </section>
@@ -156,7 +164,7 @@
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__wrapper">
-        <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacts__slogan title">Приглашаем к сотрудничеству дилеров!</p>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8
           <span class="contacts__city">Санкт-Петербург</span>
         </address>
