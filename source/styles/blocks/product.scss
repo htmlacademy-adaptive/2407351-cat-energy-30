@@ -1,0 +1,32 @@
+.product {
+  --title-size: 16px;
+  --title-lh: 20px;
+  --description-size: 12px;
+  --description-lh: 16px;
+  --title-color: #{$basic-text-color-2};
+
+  &--next {
+    --title-color: #{$text-grey};
+  }
+
+  &--additional {
+    --title-lh: 16px;
+    --description-size: 14px;
+    --description-lh: 14px;
+  }
+}
+
+.product__title {
+  font-family: $secondary-font;
+  font-size: var(--title-size);
+  font-weight: 400;
+  line-height: var(--title-lh);
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+.product__description {
+  font-size: var(--description-size);
+  line-height: var(--description-lh);
+}
+

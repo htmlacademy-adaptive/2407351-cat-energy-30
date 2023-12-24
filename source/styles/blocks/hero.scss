@@ -1,0 +1,23 @@
+.hero__wrapper {
+  padding: 0 20px;
+}
+
+.hero__title {
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: $basic-white;
+}
+
+.hero__slogan {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $basic-white;
+}
+
+.hero__image {
+  margin: 0 auto;
+}
