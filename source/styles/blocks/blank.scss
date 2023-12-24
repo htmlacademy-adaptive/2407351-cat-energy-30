@@ -1,5 +1,6 @@
 .blank__row {
   display: block;
+  text-transform: uppercase;
 }
 
 .blank__title {
@@ -10,5 +11,7 @@
 .blank__textarea {
   font-family: inherit;
   font-size: inherit;
+  line-height: inherit;
   color: inherit;
+  text-transform: uppercase;
 }
