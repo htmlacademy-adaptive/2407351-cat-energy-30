@@ -1,3 +1,26 @@
+.copyright {
+  width: 100%;
+}
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  --img-fill: #666666;
+
+  &:hover {
+    --img-fill: #{$accent-color};
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__image {
+  fill: var(--img-fill);
+}
+
 .copyright__text {
   font-size: 16px;
   line-height: 20px;

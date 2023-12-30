@@ -9,14 +9,14 @@
   text-transform: uppercase;
   text-align: center;
   border: 0;
-}
 
-.button--primary {
-  color: $basic-white;
-  background-color: $accent-color;
-}
+  &--primary {
+    color: $basic-white;
+    background-color: $accent-color;
+  }
 
-.button--secondary {
-  color: $basic-text-color;
-  background-color: $basic-grey;
+  &--secondary {
+    color: $basic-text-color;
+    background-color: $basic-grey;
+  }
 }
