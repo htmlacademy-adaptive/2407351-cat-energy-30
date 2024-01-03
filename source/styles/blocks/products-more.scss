@@ -4,7 +4,11 @@
 }
 
 .products-more__gift {
-  background-color: $accent-color;
+  width: 100%;
+  height: 290px;
+  background: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%)/*, url("../../images/cat-backpack-desktop@1x.jpg")*/;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .products-more__gift-description {
@@ -12,4 +16,13 @@
   line-height: 20px;
   text-align: center;
   color: $basic-white;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 78px;
+    height: 81px;
+    margin: 0 auto;
+    background-image: url("../../images/icons/stack.svg#gift-icon");
+  }
 }
