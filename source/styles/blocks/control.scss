@@ -20,6 +20,10 @@
     --mark-border-color: #bababa;
   }
 
+  &:focus-visible + .control__mark {
+    border-color: $accent-color;
+  }
+
   &[type="radio"]:checked + .control__mark--radio::before {
     content: "";
     display: block;
