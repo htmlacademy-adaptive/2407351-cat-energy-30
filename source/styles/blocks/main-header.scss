@@ -1,11 +1,30 @@
 .main-header {
-  position: relative;
-  display: flex;
   background-color: #ffffff;
+
+  --header-wrap-p: 13px 20px 15px;
+  --header-logo-text-pos: absolute;
+
+  @media #{$not-mobile} {
+    display: flex;
+    justify-content: space-between;
+
+    --header-wrap-p: 0;
+    --header-logo-text-pos: static;
+  }
 }
 
 .main-header__wrapper {
-  margin-right: auto;
+  position: relative;
+  padding: var(--header-wrap-p);
+}
+
+.main-header__logo-text {
+  position: var(--header-logo-text-pos);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }
 
 .main-header__image {

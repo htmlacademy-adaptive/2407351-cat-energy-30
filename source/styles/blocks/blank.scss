@@ -25,9 +25,9 @@
   }
 }
 
-.blank__icon {
+.blank-icon {
   position: relative;
-  --blank-icon-color: #000000;
+  --blank-icon-color: #222222;
 
   &--email {
     --blank-icon-url: url("../../images/icons/stack.svg#mail-icon");

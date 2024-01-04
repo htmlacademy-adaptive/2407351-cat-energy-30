@@ -1,5 +1,6 @@
 .logo {
   display: flex;
+  align-items: center;
 
   &:hover {
     opacity: 0.8;
@@ -10,9 +11,15 @@
   }
 }
 
-.logo__image--text {
-  @media #{$desktop-only} {
-    width: 118px;
-    height: 21px;
+.logo__image {
+  &--pic {
+    margin-right: 13px;
+  }
+
+  &--text {
+    @media #{$desktop-only} {
+      width: 118px;
+      height: 21px;
+    }
   }
 }
