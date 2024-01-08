@@ -6,11 +6,13 @@
 
   --burger-button-img: url("../../images/icons/stack.svg#close-icon");
   --burger-button-sz: 18px 18px;
+  --nav-toggle-display: block;
   --nav-list-direction: column;
   --nav-display: block;
   --nav-item-p: 22px 20px 24px;
   --nav-link-sz: 20px;
   --nav-link-lh: 20px;
+  --nav-link-color: #{$basic-blank};
 
   &--closed {
     --nav-display: none;
@@ -20,7 +22,9 @@
 
   @media #{$not-mobile} {
     position: relative;
+    z-index: 0;
 
+    --nav-toggle-display: none;
     --nav-display: flex;
     --nav-list-direction: row;
     --nav-item-p: 13px 16.5px;
@@ -29,9 +33,12 @@
   }
 
   @media #{$desktop-only} {
+    background-color: transparent;
+
     --nav-item-p: 14.5px 16.5px;
     --nav-link-sz: 20px;
     --nav-link-lh: 30px;
+    --nav-link-color: #{$basic-white};
   }
 }
 
@@ -39,7 +46,7 @@
   position: absolute;
   right: 20px;
   top: -53px;
-  display: block;
+  display: var(--nav-toggle-display);
   width: 38px;
   height: 38px;
   padding: 0;
@@ -49,10 +56,6 @@
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
-
-  @media #{$not-mobile} {
-    display: none;
-  }
 }
 
 .main-nav__wrapper {
@@ -77,5 +80,5 @@
   font-size: var(--nav-link-sz);
   line-height: var(--nav-link-lh);
   text-transform: uppercase;
-  color: $basic-blank;
+  color: var(--nav-link-color);
 }
