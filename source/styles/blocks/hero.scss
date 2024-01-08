@@ -1,12 +1,35 @@
+.hero {
+  color: $basic-white;
+  text-align: center;
+
+  --hero-wrap-p: 0 20px;
+  --hero-title-color: #{$basic-white};
+
+  @media #{$not-mobile} {
+    text-align: left;
+
+    --hero-button-w: max-content;
+    --hero-wrap-p: 0 120px;
+  }
+
+  @media #{$desktop-only} {
+    color: $basic-blank;
+
+    --hero-wrap-w: 50%;
+    --hero-wrap-p: 0 100px 0 190px;
+    --hero-title-color: #{$basic-blank};
+  }
+}
+
 .hero__wrapper {
-  padding: 0 20px;
+  width: var(--hero-wrap-w);
+  padding: var(--hero-wrap-p);
 }
 
 .hero__title {
   font-size: 36px;
   line-height: 36px;
-  text-align: center;
-  color: $basic-white;
+  color: var(--hero-title-color);
 }
 
 .hero__slogan {
@@ -14,10 +37,17 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
-  text-align: center;
-  color: $basic-white;
 }
 
 .hero__image {
+  position: var(--hero-img-pos);
   margin: 0 auto;
+}
+
+.hero__button {
+  width: var(--hero-button-w);
+
+  @media #{$not-mobile} {
+    padding: 14px 26px;
+  }
 }

@@ -1,17 +1,110 @@
+.purpose__wrapper {
+  padding: 0 20px;
+}
+
 .purpose__item {
+  padding: 30px 20px 18px;
   background-color: $basic-grey;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &--weight-loss {
+    --purpose-icon-top: -9px;
+    --purpose-icon-left: 7px;
+    --purpose-icon-w: 36px;
+    --purpose-icon-h: 50px;
+    --purpose-icon: url("../../images/icons/stack.svg#cat-slim");
+  }
+
+  &--weight-gain {
+    --purpose-icon-top: 5px;
+    --purpose-icon-left: -8px;
+    --purpose-icon-w: 67px;
+    --purpose-icon-h: 28px;
+    --purpose-icon: url("../../images/icons/stack.svg#cat-pro");
+  }
 }
 
 .purpose__title {
+  position: relative;
+  margin: 0;
+  padding-left: 70px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: $accent-color;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: var(--purpose-icon-top);
+    left: var(--purpose-icon-left);
+    display: inline-block;
+    width: var(--purpose-icon-w);
+    height: var(--purpose-icon-h);
+    mask-image: var(--purpose-icon);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #000000;
+  }
+}
+
+.purpose__description {
+  &::after {
+    content: "";
+    display: block;
+    margin: 23px 0 19px;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+}
+
+.purpose__link-wrapper {
+  display: flex;
 }
 
 .purpose__link {
+  display: flex;
+  align-items: center;
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: $basic-blank;
+  --arrow-pos: -8px;
+
+  &:hover {
+    --arrow-pos: 0;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    width: 32px;
+    height: 12px;
+    margin-left: 15px;
+    background-image: url("../../images/icons/stack.svg#arrow-icon");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: var(--arrow-pos);
+    overflow: hidden;
+    transition: all 0.1s ease-in;
+  }
 }
