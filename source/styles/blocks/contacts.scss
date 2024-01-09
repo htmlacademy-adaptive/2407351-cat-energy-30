@@ -17,7 +17,8 @@
     image-set(
       url("/images/map-phone@1x.png") type("image/png") 1x,
       url("/images/map-phone@2x.png") type("image/png") 2x
-    );
+    ),
+    url("/images/map-phone@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -26,9 +27,10 @@
     height: 400px;
     background-image:
       image-set(
-      url("/images/map-tablet@1x.png") type("image/png") 1x,
-      url("/images/map-tablet@2x.png") type("image/png") 2x
-    );
+        url("/images/map-tablet@1x.png") type("image/png") 1x,
+        url("/images/map-tablet@2x.png") type("image/png") 2x
+    ),
+      url("/images/map-tablet@1x.png");
   }
 
   @media #{$desktop-only} {
@@ -37,6 +39,7 @@
       image-set(
       url("/images/map-desktop@1x.png") type("image/png") 1x,
       url("/images/map-desktop@2x.png") type("image/png") 2x
-    );
+    ),
+      url("/images/map-desktop@1x.png");
   }
 }

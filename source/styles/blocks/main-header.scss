@@ -3,6 +3,7 @@
 
   --header-wrap-p: 13px 20px 15px;
   --header-logo-text-pos: absolute;
+  --bg-cat-pos: center;
   --bg-cat-top: 65px;
   --bg-cat-display: block;
   --bg-cat-w: 100%;
@@ -24,6 +25,7 @@
   @media #{$desktop-only} {
     background-color: transparent;
 
+    --bg-cat-pos: left;
     --bg-cat-top: 0;
     --bg-cat-w: 50%;
     --bg-cat-h: 694px;
@@ -46,14 +48,14 @@
           url("/images/index-background-phone@2x.jpg") type("image/jpeg") 2x
       );
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: var(--bg-cat-pos);
       background-size: cover;
       z-index: var(--bg-cat-z-index);
     }
   }
 }
 
-.main-header__wrapper {
+.main-header__wrap-logo {
   position: relative;
   padding: var(--header-wrap-p);
 }

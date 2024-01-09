@@ -14,6 +14,12 @@
   --nav-link-lh: 20px;
   --nav-link-color: #{$basic-blank};
 
+  &--cat {
+    @media #{$desktop-only} {
+      --nav-link-color: #{$basic-white};
+    }
+  }
+
   &--closed {
     --nav-display: none;
     --burger-button-img: url("../../images/icons/stack.svg#burger-icon");
@@ -38,7 +44,6 @@
     --nav-item-p: 14.5px 16.5px;
     --nav-link-sz: 20px;
     --nav-link-lh: 30px;
-    --nav-link-color: #{$basic-white};
   }
 }
 
@@ -81,4 +86,12 @@
   line-height: var(--nav-link-lh);
   text-transform: uppercase;
   color: var(--nav-link-color);
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }

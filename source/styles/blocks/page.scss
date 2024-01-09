@@ -8,4 +8,21 @@
   min-height: 100%;
   max-width: 1600px;
   margin: 0 auto;
+
+  &--noscroll {
+    position: fixed;
+    overflow-y: scroll;
+  }
+}
+
+.page__header {
+  @media #{$not-mobile} {
+    margin-top: 25px;
+    padding: 0 30px;
+  }
+
+  @media #{$desktop-only} {
+    margin-top: 55px;
+    padding: 0 110px;
+  }
 }

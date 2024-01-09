@@ -13,10 +13,26 @@
   &--primary {
     color: $basic-white;
     background-color: $accent-color;
+
+    &:hover {
+      background-color: $accent-color-active;
+    }
+
+    &:active {
+      color: rgba($basic-white, 0.3);
+    }
   }
 
   &--secondary {
     color: $basic-text-color;
     background-color: $basic-grey;
+
+    &:hover {
+      background-color: $basic-grey-active;
+    }
+
+    &:active {
+      background-color: $basic-grey-active;
+    }
   }
 }
