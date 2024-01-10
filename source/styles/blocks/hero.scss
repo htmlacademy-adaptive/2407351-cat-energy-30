@@ -38,6 +38,8 @@
   }
 
   @media #{$desktop-only} {
+    margin-bottom: 82px;
+
     --hero-wrap-w: 50%;
     --hero-wrap-min-h: 580px;
     --hero-wrap-p: 110px 40px 110px 190px;
@@ -56,6 +58,7 @@
 }
 
 .hero__title {
+  margin: 0;
   margin-bottom: var(--hero-title-m-bottom);
   font-size: var(--hero-title-size);
   line-height: var(--hero-title-lh);
