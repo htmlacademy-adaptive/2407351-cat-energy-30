@@ -9,7 +9,7 @@
   --nav-toggle-display: block;
   --nav-list-direction: column;
   --nav-display: block;
-  --nav-item-p: 22px 20px 24px;
+  --nav-link-p: 22px 20px 24px;
   --nav-link-sz: 20px;
   --nav-link-lh: 20px;
   --nav-link-color: #{$basic-blank};
@@ -28,20 +28,22 @@
 
   @media #{$not-mobile} {
     position: relative;
+    width: 70%;
     z-index: 0;
 
     --nav-toggle-display: none;
     --nav-display: flex;
     --nav-list-direction: row;
-    --nav-item-p: 13px 16.5px;
+    --nav-link-p: 13px 16.5px;
     --nav-link-sz: 18px;
     --nav-link-lh: 24px;
   }
 
   @media #{$desktop-only} {
+    width: 48%;
     background-color: transparent;
 
-    --nav-item-p: 14.5px 16.5px;
+    --nav-link-p: 14.5px 16.5px;
     --nav-link-sz: 20px;
     --nav-link-lh: 30px;
   }
@@ -70,17 +72,18 @@
 
 .main-nav__list {
   display: flex;
+  justify-content: end;
   flex-wrap: wrap;
   flex-direction: var(--nav-list-direction);
 }
 
 .main-nav__item {
-  padding: var(--nav-item-p);
   text-align: center;
 }
 
 .main-nav__link {
   display: block;
+  padding: var(--nav-link-p);
   font-family: $secondary-font;
   font-size: var(--nav-link-sz);
   line-height: var(--nav-link-lh);
