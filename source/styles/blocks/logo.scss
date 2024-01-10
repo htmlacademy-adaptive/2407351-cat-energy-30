@@ -1,3 +1,25 @@
 .logo {
-  background: transparent;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__image {
+  &--pic {
+    margin-right: 13px;
+  }
+
+  &--text {
+    @media #{$desktop-only} {
+      width: 118px;
+      height: 21px;
+    }
+  }
 }

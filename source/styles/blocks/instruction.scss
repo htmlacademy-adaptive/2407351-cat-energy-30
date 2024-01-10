@@ -1,4 +1,45 @@
+.instruction__wrapper {
+  padding: 0 20px;
+}
+
 .instruction__title {
   font-size: 36px;
   line-height: 40px;
+}
+
+.instruction__item {
+  display: flex;
+
+  &--nutrients {
+    --bg-img-url: url("../../images/icons/stack.svg#leaf-icon");
+    --bg-img-size: 25px 28px;
+  }
+
+  &--powder {
+    --bg-img-url: url("../../images/icons/stack.svg#glass-icon");
+    --bg-img-size: 27px 29px;
+  }
+
+  &--subtitute {
+    --bg-img-url: url("../../images/icons/stack.svg#tableware-icon");
+    --bg-img-size: 26px 30px;
+  }
+
+  &--pleasure {
+    --bg-img-url: url("../../images/icons/stack.svg#clock-icon");
+    --bg-img-size: 27px 31px;
+  }
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background-image: var(--bg-img-url);
+    background-color: $accent-color;
+    background-size: var(--bg-img-size);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
