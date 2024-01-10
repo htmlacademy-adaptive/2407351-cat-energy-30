@@ -42,10 +42,10 @@
       width: var(--bg-cat-w);
       height: var(--bg-cat-h);
       background-image:
-        linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%),
+        linear-gradient(rgba($accent-color, 0.85) 0%, rgba($accent-color, 0.85) 100%),
         image-set(
-          url("/images/index-background-phone@1x.jpg") type("image/jpeg") 1x,
-          url("/images/index-background-phone@2x.jpg") type("image/jpeg") 2x
+          url("../../images/index-background-phone@1x.jpg") type("image/jpeg") 1x,
+          url("../../images/index-background-phone@2x.jpg") type("image/jpeg") 2x
       );
       background-repeat: no-repeat;
       background-position: var(--bg-cat-pos);
