@@ -89,13 +89,10 @@
 .hero__button {
   width: var(--hero-button-w);
   max-width: 400px;
-  margin-top: 3px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 3px auto 0;
 
   @media #{$not-mobile} {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
     padding: 14px 26px;
     font-size: 20px;
     line-height: 26px;
