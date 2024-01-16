@@ -49,9 +49,10 @@
   }
 }
 
-.hero__wrapper {
+.hero__wrap {
   display: flex;
   flex-direction: column;
+
   min-height: var(--hero-wrap-min-h);
   width: var(--hero-wrap-w);
   padding: var(--hero-wrap-p);

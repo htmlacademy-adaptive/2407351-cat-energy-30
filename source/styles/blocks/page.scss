@@ -6,7 +6,6 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   min-height: 100%;
-  max-width: 1600px;
   margin: 0 auto;
 
   &--noscroll {
@@ -22,6 +21,10 @@
   }
 
   @media #{$desktop-only} {
+    width: 100%;
+    max-width: $breakpoint-max-w;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 55px;
     padding: 0 110px;
   }
