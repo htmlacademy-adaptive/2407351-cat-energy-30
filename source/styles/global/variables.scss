@@ -16,6 +16,7 @@ $secondary-font: "Oswald", "Arial", sans-serif;
 
 // Размеры вьюпортов
 $breakpoint-max-w: 1600px;
+$breakpoint-big-desktop: 1440px;
 $breakpoint-desktop: 1310px;
 $breakpoint-tablet: 768px;
 $breakpoint-gap: 0.02px;
@@ -23,5 +24,6 @@ $breakpoint-gap: 0.02px;
 $mobile-only: "(max-width: #{$breakpoint-tablet - $breakpoint-gap})";
 $tablet-only: "(min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - $breakpoint-gap})";
 $desktop-only: "(min-width: #{$breakpoint-desktop})";
+$desktop-big-only: "(min-width: #{$breakpoint-big-desktop})";
 $not-mobile: "(min-width: #{$breakpoint-tablet})";
 $not-desktop: "(max-width: #{$breakpoint-desktop - $breakpoint-gap})";

@@ -34,7 +34,8 @@
     --nav-toggle-display: none;
     --nav-display: flex;
     --nav-list-direction: row;
-    --nav-link-p: 13px 16.5px;
+    --nav-link-p: 13px 0;
+    --nav-link-m-left: 33px;
     --nav-link-sz: 18px;
     --nav-link-lh: 24px;
   }
@@ -43,7 +44,7 @@
     width: 48%;
     background-color: transparent;
 
-    --nav-link-p: 14.5px 16.5px;
+    --nav-link-p: 14.5px 0;
     --nav-link-sz: 20px;
     --nav-link-lh: 30px;
   }
@@ -84,6 +85,7 @@
 .main-nav__link {
   display: block;
   padding: var(--nav-link-p);
+  margin-left: var(--nav-link-m-left);
   font-family: $secondary-font;
   font-size: var(--nav-link-sz);
   line-height: var(--nav-link-lh);

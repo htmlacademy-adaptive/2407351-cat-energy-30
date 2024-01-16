@@ -43,9 +43,10 @@
     --hero-wrap-w: 50%;
     --hero-wrap-min-h: 580px;
     --hero-wrap-p: 110px 40px 110px 190px;
+    --hero-slogan-m-bottom: 52px;
     --hero-img-left: 50%;
     --hero-img-wrap-w: 552px;
-    --hero-img-translate: -30%;
+    --hero-img-translate: -29.5%;
   }
 }
 
@@ -97,7 +98,7 @@
 
   @media #{$not-mobile} {
     margin: 0;
-    padding: 14px 26px;
+    padding: 14px 27px;
     font-size: 20px;
     line-height: 26px;
   }
