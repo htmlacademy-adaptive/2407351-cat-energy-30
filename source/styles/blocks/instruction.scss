@@ -1,15 +1,15 @@
 .instruction__wrapper {
-  padding: 0 20px;
+  padding: 20px 20px 49px;
 
   @media #{$not-mobile} {
-    padding: 0 30px;
+    padding: 45px 30px 47px;
   }
 
   @media #{$desktop-only} {
     max-width: $breakpoint-max-w;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 110px;
+    padding: 71px 110px 69px;
   }
 }
 
@@ -40,11 +40,7 @@
   @media #{$desktop-big-only} {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
     column-gap: 6.5%;
-    // max-width: 100%;
     padding-right: 0;
   }
 }

@@ -3,31 +3,127 @@
 }
 
 .example__wrapper {
-  padding: 0 20px;
+  padding: 25px 20px 40px;
+
+  @media #{$not-mobile} {
+    padding: 45px 30px 101px;
+  }
+
+  @media #{$desktop-only} {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $breakpoint-max-w;
+    padding: 0 110px;
+  }
 }
 
 .example__title {
+  margin: 0;
+  margin-bottom: 40px;
   font-size: 36px;
   line-height: 40px;
+
+  @media #{$not-mobile} {
+    margin-bottom: 60px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.example__text {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media #{$not-mobile} {
+    margin-bottom: 55px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.example__numbers {
+  margin-bottom: 20px;
+
+  @media #{$not-mobile} {
+    display: flex;
+    margin-bottom: 99px;
+  }
+}
+
+.example__list {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 280px;
+  margin: 0 auto 20px;
+
+  @media #{$not-mobile} {
+    max-width: none;
+    width: 367px;
+    gap: 43px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.example__item {
+  width: 100%;
 }
 
 .example__value {
+  width: 100%;
+  padding: 14.5px 10px 17.5px;
   font-family: $secondary-font;
   font-size: 24px;
   line-height: 24px;
+  text-align: center;
   text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  @media #{$not-mobile} {
+    padding: 15px 15px 20px;
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__description {
+  max-width: 90%;
+  width: 71%;
+  margin: -9px auto 0;
+  padding: 0 4px;
   font-size: 12px;
   line-height: 12px;
+  text-align: center;
+  background: $live-example-color;
+
+  @media #{$not-mobile} {
+    width: 100%;
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .example__price {
+  margin: 0;
   font-family: $secondary-font;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
   color: $basic-blank;
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+    text-align: right;
+  }
+}
+
+.example__price-description {
+  @media #{$not-mobile} {
+    display: block;
+    margin-bottom: 9px;
+  }
 }
