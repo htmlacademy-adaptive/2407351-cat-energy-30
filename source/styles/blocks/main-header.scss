@@ -1,8 +1,12 @@
 .main-header {
   background-color: #ffffff;
 
-  --header-wrap-p: 13px 20px 15px;
-  --header-logo-text-pos: absolute;
+  --header-wrap-p: 13px 20px 14px;
+  --bg-cat-img:
+    image-set(
+      url("../../images/index-background-phone@1x.jpg") type("image/jpeg") 1x,
+      url("../../images/index-background-phone@2x.jpg") type("image/jpeg") 2x);
+  --bg-cat-sz: cover;
   --bg-cat-pos: center;
   --bg-cat-top: 65px;
   --bg-cat-display: block;
@@ -15,7 +19,6 @@
     justify-content: space-between;
 
     --header-wrap-p: 0;
-    --header-logo-text-pos: static;
   }
 
   @media #{$tablet-only} {
@@ -25,7 +28,12 @@
   @media #{$desktop-only} {
     background-color: transparent;
 
-    --bg-cat-pos: left;
+    --bg-cat-img:
+      image-set(
+        url("../../images/index-background-desktop@1x.jpg") type("image/jpeg") 1x,
+        url("../../images/index-background-desktop@2x.jpg") type("image/jpeg") 2x);
+    --bg-cat-sz: contain;
+    --bg-cat-pos: right bottom;
     --bg-cat-top: 0;
     --bg-cat-w: 50%;
     --bg-cat-h: 694px;
@@ -41,15 +49,11 @@
       display: var(--bg-cat-display);
       width: var(--bg-cat-w);
       height: var(--bg-cat-h);
-      background-image:
-        linear-gradient(rgba($accent-color, 0.85) 0%, rgba($accent-color, 0.85) 100%),
-        image-set(
-          url("../../images/index-background-phone@1x.jpg") type("image/jpeg") 1x,
-          url("../../images/index-background-phone@2x.jpg") type("image/jpeg") 2x
-      );
+      background: linear-gradient(rgba($accent-color, 0.85) 0%, rgba($accent-color, 0.85) 100%), var(--bg-cat-img);
+      background-color: #4c4b4f;
       background-repeat: no-repeat;
+      background-size: var(--bg-cat-sz);
       background-position: var(--bg-cat-pos);
-      background-size: cover;
       z-index: var(--bg-cat-z-index);
     }
   }
@@ -61,12 +65,24 @@
 }
 
 .main-header__logo-text {
-  position: var(--header-logo-text-pos);
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
+  width: 101px;
+  height: 18px;
   margin: auto;
+  translate: -1px;
+
+  @media #{$not-mobile} {
+    position: static;
+  }
+
+  @media #{$desktop-only} {
+    width: 118px;
+    height: 21px;
+  }
 }
 
 .main-header__image {

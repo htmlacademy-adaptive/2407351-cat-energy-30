@@ -33,7 +33,7 @@
 .purpose__item {
   display: flex;
   flex-direction: column;
-  padding: 30px 20px 18px;
+  padding: 30px 20px 22px;
   background-color: $basic-grey;
 
   @media #{$not-mobile} {
@@ -110,6 +110,7 @@
   --purpose-circle-w: 50px;
 
   @media #{$not-mobile} {
+    margin-bottom: 24px;
     font-size: 36px;
     line-height: 36px;
   }
@@ -187,7 +188,7 @@
   &::after {
     content: "";
     display: var(--purpose-desc-line);
-    margin-top: 23px;
+    margin-top: 22px;
     height: 1px;
     background-color: #d9d9d9;
   }
@@ -206,13 +207,13 @@
   line-height: 16px;
   text-transform: uppercase;
   color: $basic-blank;
-  --arrow-m: 15px;
+  --arrow-m: 16px;
   --arrow-pos: -8px;
 
   @media #{$not-mobile} {
     font-size: 20px;
     line-height: 30px;
-    --arrow-m: 25px;
+    --arrow-m: 26px;
   }
 
   &:hover {
