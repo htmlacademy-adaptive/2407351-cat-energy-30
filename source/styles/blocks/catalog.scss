@@ -1,4 +1,12 @@
+.catalog__header {
+  padding: 27px 0 41px;
+  border-top: 1px solid $line-grey;
+  border-bottom: 1px solid $line-grey;
+}
+
 .catalog__title {
+  padding: 0 20px;
+  margin: 0;
   font-size: 36px;
   line-height: 36px;
 }

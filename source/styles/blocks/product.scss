@@ -1,7 +1,7 @@
 .product {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  // padding: 20px 20px 25px;
+  padding: 20px 20px 25px;
 
   --title-size: 16px;
   --title-lh: 20px;
@@ -30,12 +30,15 @@
 }
 
 .product__image-link {
-  display: block;
+  display: flex;
+  align-items: center;
   width: max-content;
   margin: 0 auto;
 }
 
 .product__title {
+  margin: 0;
+  margin-bottom: 14px;
   font-family: $secondary-font;
   font-size: var(--title-size);
   font-weight: 400;
