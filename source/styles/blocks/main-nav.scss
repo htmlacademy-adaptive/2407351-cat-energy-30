@@ -8,6 +8,7 @@
   --burger-button-sz: 18px 18px;
   --nav-toggle-display: block;
   --nav-display: block;
+  --nav-item-border: 1px solid #{$line-light-grey};
   --nav-link-p: 22px 20px 24px;
   --nav-link-sz: 20px;
   --nav-link-lh: 20px;
@@ -21,6 +22,7 @@
 
   &--closed {
     --nav-display: none;
+    --nav-item-border: 0;
     --burger-button-img: url("../../images/icons/stack.svg#burger-icon");
     --burger-button-sz: 24px 24px;
   }
@@ -86,9 +88,11 @@
 
 .main-nav__item {
   text-align: center;
+  border-top: var(--nav-item-border);
 
   @media #{$not-mobile} {
     margin-left: 34px;
+    --nav-item-border: 0;
   }
 
   @media #{$desktop-only} {

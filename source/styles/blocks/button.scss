@@ -28,11 +28,11 @@
     background-color: $basic-grey;
 
     &:hover {
-      background-color: $basic-grey-active;
+      background-color: $basic-grey-darkness;
     }
 
     &:active {
-      background-color: $basic-grey-active;
+      background-color: $basic-grey-darkness;
     }
   }
 }

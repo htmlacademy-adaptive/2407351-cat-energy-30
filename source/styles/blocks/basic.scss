@@ -1,3 +1,25 @@
-.basic {
-  background: transparent;
+.basic__wrapper {
+  @media #{$not-mobile} {
+    padding: 0 30px;
+  }
+
+  @media #{$desktop-only} {
+    max-width: $breakpoint-max-w;
+    margin: 0 auto;
+    padding: 0 110px;
+  }
+}
+
+.basic__list {
+  @media #{$not-mobile} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+}
+
+.basic__item {
+  @media #{$not-mobile} {
+    background: linear-gradient(to bottom, #{$basic-white} 81px, #{$basic-grey} 81px);
+  }
 }
