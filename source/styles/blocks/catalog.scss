@@ -1,11 +1,9 @@
-
 .catalog__title {
   display: block;
   margin: 0;
-  padding: 27px 20px 41px;
+  padding: 27px 20px 40px;
   font-size: 36px;
   line-height: 36px;
-  border-bottom: 1px solid $line-grey;
 
   @media #{$not-mobile} {
     padding: 65px 30px 84px;

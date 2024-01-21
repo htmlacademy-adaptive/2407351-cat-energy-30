@@ -1,13 +1,23 @@
+.products-more__list {
+  padding: 0 20px;
+}
+
 .products-more__title {
+  margin: 0 auto;
+  padding: 26px 20px 35px;
   font-size: 24px;
   line-height: 24px;
 }
 
 .products-more__gift {
-  margin: 0 auto;
+  padding: 36px 20px 35px;
+}
+
+.products-more__gift-content {
+  // margin: 0 auto;
   width: 100%;
   min-height: 290px;
-  padding: 59px 25px 43px;
+  padding: 59px 50px 43px;
   background-image:
     linear-gradient(rgba($accent-color, 0.85) 0%, rgba($accent-color, 0.85) 100%),
     image-set(
@@ -37,11 +47,10 @@
   }
 }
 
-.products-more__gift-description {
+.products-more__gift-descrip {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: space-between;
   height: 100%;
   margin: 0;
   font-size: 16px;
@@ -54,7 +63,6 @@
     display: block;
     width: 78px;
     height: 81px;
-    // margin: 0 auto;
     margin-bottom: 48px;
     background-image: url("../../images/icons/stack.svg#gift-icon");
   }

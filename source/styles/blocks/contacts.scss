@@ -33,6 +33,14 @@
     max-height: 120%;
     padding: 61px 70px 60px 80px;
   }
+
+  &--grey {
+    background-color: $basic-grey;
+
+    @media #{$desktop-only} {
+      background-color: $basic-white;
+    }
+  }
 }
 
 .contacts__slogan {
@@ -111,17 +119,4 @@
     );
     background-position: center 0;
   }
-
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 45.5%;
-  //   left: 51%;
-  //   translate: -50% -50%;
-  //   display: block;
-  //   width: 57px;
-  //   height: 53px;
-  //   background-image: url("../../images/map-pin.png");
-  //   background-size: contain;
-  // }
 }
