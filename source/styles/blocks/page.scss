@@ -9,6 +9,7 @@
   margin: 0 auto;
 
   &--noscroll {
+    width: 100%;
     position: fixed;
     overflow-y: scroll;
   }

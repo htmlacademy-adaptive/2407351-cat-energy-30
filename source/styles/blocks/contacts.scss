@@ -6,15 +6,17 @@
 
 .contacts__wrapper {
   @media #{$desktop-only} {
-    position: absolute;
+    position: relative;
     top: 0;
-    left: 0;
-    bottom: 0;
+    left: 110px;
     right: 0;
+    display: block;
+    height: 1px;
     max-width: $breakpoint-max-w;
-    margin: 0 auto;
-    padding: 95px 110px;
+    margin: -1px auto 0;
+    // padding: 95px 110px;
     z-index: 1;
+    background-color: $live-example-color;
   }
 }
 
@@ -29,7 +31,10 @@
   }
 
   @media #{$desktop-only} {
+    position: absolute;
+    bottom: -295px;
     width: 565px;
+    min-height: 199px;
     max-height: 120%;
     padding: 61px 70px 60px 80px;
   }
@@ -72,10 +77,12 @@
   @media #{$not-mobile} {
     max-width: 170px;
     font-size: 16px;
+    text-align: right;
   }
 
   @media #{$desktop-only} {
     max-width: 165px;
+    text-align: left;
     overflow: hidden;
   }
 }
