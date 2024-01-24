@@ -28,6 +28,11 @@
     --burger-button-sz: 24px 24px;
   }
 
+  &--nojs {
+    --nav-toggle-display: none;
+    --nav-display: block;
+  }
+
   @media #{$not-mobile} {
     position: relative;
     width: 70%;
