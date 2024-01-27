@@ -8,15 +8,14 @@
   @media #{$desktop-only} {
     position: relative;
     top: 0;
-    left: 110px;
-    right: 0;
+    padding: 0 110px;
     display: block;
     height: 1px;
     max-width: $breakpoint-max-w;
     margin: -1px auto 0;
     // padding: 95px 110px;
     z-index: 1;
-    background-color: $live-example-color;
+    background-color: transparent;
   }
 }
 

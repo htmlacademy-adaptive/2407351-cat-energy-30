@@ -58,7 +58,7 @@
   @media #{$not-mobile} {
     grid-template-rows: auto 1fr;
     column-gap: 33px;
-    row-gap: 29px;
+    row-gap: 31px;
     min-height: 280px;
     min-width: 247px;
     max-width: 290px;
@@ -124,15 +124,14 @@
   }
 
   &:first-child {
-    --counter-p-left: 8px;
+    --counter-p-left: 6px;
     --counter-text-align: left;
   }
 }
 
 .instruction__text {
-  // align-self: center;
   margin: 0;
-  margin-top: -2px;
+  margin-top: 2px;
 
   @media #{$not-mobile} {
     grid-row: 2 / 3;

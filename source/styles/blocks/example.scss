@@ -109,7 +109,7 @@
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $line-dark-grey;
   border-radius: 3px;
 
   @media #{$not-mobile} {

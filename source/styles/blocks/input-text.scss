@@ -1,8 +1,16 @@
 .input-text {
-  padding: 14px 40px 13px 15px;
+  min-width: 50%;
+  height: fit-content;
+  padding: 13px 14px 12px;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   color: inherit;
   text-transform: uppercase;
+  border: 1px solid #e7e7e7;
+  border-radius: 0;
+
+  @media #{$not-mobile} {
+    padding: 10px 19px;
+  }
 }

@@ -98,6 +98,7 @@
 
   @media #{$not-mobile} {
     margin-left: 34px;
+
     --nav-item-border: 0;
   }
 
@@ -137,7 +138,7 @@
       display: var(--link-current-display);
       height: 2px;
       width: 100%;
-      margin-top: 6px;
+      margin-top: 7px;
       background-color: var(--link-current-color);
     }
 
