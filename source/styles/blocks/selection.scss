@@ -6,6 +6,8 @@
   }
 
   @media #{$desktop-only} {
+    max-width: $breakpoint-max-w;
+    margin: 0 auto;
     padding: 74px 110px 67px;
   }
 }

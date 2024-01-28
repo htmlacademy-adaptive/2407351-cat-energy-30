@@ -21,8 +21,7 @@
 
   &:focus {
     outline: 2px solid $basic-text-color;
-    outline-offset: -2px;
-    border: 0;
+    border-color: transparent;
   }
 
   &:invalid {
@@ -39,5 +38,14 @@
   &[type="number"]::-webkit-outer-spin-button {
     appearance: none;
     margin: 0;
+  }
+
+  &[type="number"] {
+    appearance: textfield;
+  }
+
+  &[type="number"]:hover,
+  &[type="number"]:focus {
+    appearance: number-input;
   }
 }

@@ -1,8 +1,11 @@
 .social__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
+  column-gap: 24px;
+  row-gap: 10px;
+  max-width: 250px;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .social__link {

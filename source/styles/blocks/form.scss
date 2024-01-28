@@ -23,6 +23,9 @@
 
   @media #{$desktop-only} {
     margin-bottom: 70px;
+    max-width: $breakpoint-max-w;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -48,6 +51,8 @@
   }
 
   @media #{$desktop-only} {
+    max-width: $breakpoint-max-w;
+    margin: 0 auto;
     padding: 60px 110px 79px;
     gap: 80px;
   }
