@@ -29,6 +29,8 @@
   }
 
   &--nojs {
+    position: static;
+
     --nav-toggle-display: none;
     --nav-display: block;
   }

@@ -13,7 +13,11 @@
 
 .logo__image {
   &--pic {
-    margin-right: 13px;
+    margin-right: 56px;
+
+    @media #{$not-mobile} {
+      margin-right: 13px;
+    }
   }
 
   &--text {
