@@ -1,71 +1,230 @@
 .blank {
+  display: grid;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media #{$not-mobile} {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  @media #{$desktop-only} {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  &--cat-info {
+    gap: 15px;
+    padding-bottom: 24px;
+
+    @media #{$not-mobile} {
+      gap: 21px;
+      padding-bottom: 7px;
+    }
+
+    @media #{$desktop-only} {
+      padding: 0;
+    }
+  }
+
   &--purpose {
-    --blank-item-mb: 13px;
+    padding-top: 22px;
+    padding-bottom: 18px;
+    border-top: 1px solid $line-grey;
+    border-bottom: 1px solid $line-grey;
+
+    --blank-item-m-bottom: 13px;
+
+    @media #{$not-mobile} {
+      border: 1px solid $line-input;
+      padding: 23px 26px 26px;
+    }
+
+    @media #{$desktop-only} {
+      padding: 25px 28px 24px;
+    }
+  }
+
+  &--owner {
+    gap: 15px;
+    padding-top: 26px;
+    padding-bottom: 24px;
+
+    --blank-title-m-bottom: 20px;
+
+    @media #{$not-mobile} {
+      gap: 21px;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      --blank-title-m-bottom: 55px;
+    }
+
+    @media #{$desktop-only} {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 80px;
+
+      --blank-title-grid-column: 1 / -1;
+      --blank-row-m-bottom: 0;
+    }
+  }
+
+  &--review {
+    padding-bottom: 23px;
+
+    --blank-title-m-bottom: 38px;
+
+    @media #{$not-mobile} {
+      padding-bottom: 0;
+
+      --blank-title-m-bottom: 87px;
+    }
+
+    @media #{$desktop-only} {
+      --blank-title-m-bottom: 78px;
+    }
   }
 
   &--more {
-    --blank-item-mb: 14px;
+    --blank-title-m-bottom: 34px;
+
+    @media #{$not-mobile} {
+      margin-bottom: 0;
+
+      --blank-title-m-bottom: 57px;
+    }
   }
 }
 
-.blank__item {
-  &:not(:last-child) {
-    margin-bottom: var(--blank-item-mb);
+
+.blank__title {
+  grid-column: var(--blank-title-grid-column);
+  margin: 0;
+  margin-bottom: var(--blank-title-m-bottom);
+  padding: 0;
+  font-size: 24px;
+  line-height: 26px;
+
+  @media #{$not-mobile} {
+    font-size: 36px;
+    line-height: 36px;
+
+    & br {
+      display: none;
+    }
   }
 }
 
 .blank__row {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 13px;
+  margin-bottom: var(--blank-row-m-bottom);
   text-transform: uppercase;
 
-  &:not(:last-child) {
-    margin-bottom: 14px;
-  }
-}
-
-.blank-icon {
-  position: relative;
+  --blank-icon-right: 12px;
+  --blank-icon-bottom: 11px;
+  --blank-icon-display: none;
   --blank-icon-color: #222222;
 
+  @media #{$not-mobile} {
+    font-size: 20px;
+    line-height: 30px;
+
+    --blank-icon-right: 14px;
+    --blank-icon-bottom: 16px;
+  }
+
+  @media #{$desktop-only} {
+    --blank-icon-right: 16px;
+  }
+
+  &:focus-visible {
+    --blank-icon-color: #{$accent-color};
+  }
+
   &--email {
+    align-self: flex-end;
+
+    --blank-icon-display: block;
+    --blank-input-p-right: 40px;
     --blank-icon-url: url("../../images/icons/stack.svg#mail-icon");
   }
 
   &--tel {
+    align-self: flex-end;
+
+    --blank-icon-display: block;
+    --blank-input-p-right: 40px;
     --blank-icon-url: url("../../images/icons/stack.svg#tel-icon");
   }
 
   &::before {
     content: "";
-    display: block;
+    display: var(--blank-icon-display);
     width: 20px;
     height: 20px;
     position: absolute;
-    right: 12px;
-    top: 0;
-    bottom: 0;
+    right: var(--blank-icon-right);
+    bottom: var(--blank-icon-bottom);
     margin: auto 0;
     mask-image: var(--blank-icon-url);
     background-color: var(--blank-icon-color);
   }
 }
 
+.blank__list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  &--checkbox {
+    @media #{$not-mobile} {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
+      gap: 32px 60px;
+    }
+
+    @media #{$desktop-only} {
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      column-gap: 80px;
+    }
+  }
+}
+
 .blank__input {
   display: flex;
   flex-grow: 1;
-}
+  padding-right: var(--blank-input-p-right);
 
-.blank__title {
-  font-size: 24px;
-  line-height: 26px;
+  &:invalid {
+    --blank-icon-color: #{$invalid-color};
+  }
 }
 
 .blank__textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 14px 15px;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   color: inherit;
   text-transform: uppercase;
+  border-radius: 0;
+  border-color: $line-input;
+
+  @media #{$not-mobile} {
+    min-height: 175px;
+    padding: 11px 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 9px 20px;
+  }
 }

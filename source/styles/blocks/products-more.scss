@@ -1,66 +1,128 @@
+.products-more__wrapper {
+  padding: 0 20px;
+
+  @media #{$not-mobile} {
+    padding: 0 30px;
+  }
+
+  @media #{$desktop-only} {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 81px;
+    max-width: $breakpoint-max-w;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 87px;
+    padding: 0 110px;
+  }
+}
+
+.products-more__header {
+  padding: 26px 20px 35px;
+
+  @media #{$not-mobile} {
+    padding: 70px 70px 80px;
+  }
+
+  @media #{$desktop-only} {
+    max-width: $breakpoint-max-w;
+    margin: 0 auto;
+    padding: 76px 110px 80px;
+  }
+}
+
 .products-more__title {
+  margin: 0;
   font-size: 24px;
   line-height: 24px;
+
+  @media #{$not-mobile} {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .products-more__gift {
-  margin: 0 auto;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-height: 290px;
-  padding: 59px 25px 43px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  padding-top: 14px;
   background-image:
     linear-gradient(rgba($accent-color, 0.85) 0%, rgba($accent-color, 0.85) 100%),
     image-set(
-      url("../../images/cat-backpack-phone@1x.jpg") type("image/jpeg") 1x,
-      url("../../images/cat-backpack-phone@2x.jpg") type("image/jpeg") 2x
-    );
+    url("../../images/cat-backpack-phone@1x.jpg") type("image/jpeg") 1x,
+    url("../../images/cat-backpack-phone@2x.jpg") type("image/jpeg") 2x
+  );
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
+  --products-gift-w: 80px;
+  --products-gift-h: 81px;
+  --products-gift-m-bottom: 49px;
+
   @media #{$not-mobile} {
+    padding-top: 0;
+
+    --products-gift-w: 81px;
+    --products-gift-h: 83px;
+  }
+
+  @media #{$tablet-only} {
+    min-height: 200px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 70px;
+    margin-bottom: 75px;
+    padding: 0 77px;
     background-image:
       linear-gradient(rgba($accent-color, 0.85) 0%, rgba($accent-color, 0.85) 100%),
       image-set(
       url("../../images/cat-backpack-tablet@1x.jpg") type("image/jpeg") 1x,
       url("../../images/cat-backpack-tablet@2x.jpg") type("image/jpeg") 2x
     );
+
+    --products-gift-m-bottom: 0;
   }
 
   @media #{$desktop-only} {
+    min-height: 288px;
+    margin: 0;
+    padding-top: 14px;
     background-image:
       linear-gradient(rgba($accent-color, 0.85) 0%, rgba($accent-color, 0.85) 100%),
       image-set(
       url("../../images/cat-backpack-desktop@1x.jpg") type("image/jpeg") 1x,
       url("../../images/cat-backpack-desktop@2x.jpg") type("image/jpeg") 2x
-    );
+      );
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: var(--products-gift-w);
+    height: var(--products-gift-w);
+    margin-bottom: var(--products-gift-m-bottom);
+    background-image: url("../../images/icons/stack.svg#gift-icon");
   }
 }
 
-.products-more__gift-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // justify-content: space-between;
-  height: 100%;
+.products-more__gift-descrip {
+  max-width: 209px;
+}
+
+.products-more__gift-text {
   margin: 0;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: $basic-white;
 
-  &::before {
-    content: "";
-    display: block;
-    width: 78px;
-    height: 81px;
-    // margin: 0 auto;
-    margin-bottom: 48px;
-    background-image: url("../../images/icons/stack.svg#gift-icon");
-  }
-
-  @media #{$not-mobile} {
-    display: flex;
-    align-items: center;
+  @media #{$tablet-only} {
+    text-align: left;
   }
 }

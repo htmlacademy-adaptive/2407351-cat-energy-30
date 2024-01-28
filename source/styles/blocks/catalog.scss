@@ -1,4 +1,24 @@
 .catalog__title {
+  display: block;
+  margin: 0;
+  padding: 27px 20px 41px;
   font-size: 36px;
   line-height: 36px;
+
+  @media #{$mobile-only} {
+    border-bottom: 1px solid #{$basic-grey-darkness};
+  }
+
+  @media #{$not-mobile} {
+    padding: 65px 30px 84px;
+    font-size: 60px;
+    line-height: 60px;
+    border-bottom: 0;
+  }
+
+  @media #{$desktop-only} {
+    max-width: $breakpoint-max-w;
+    margin: 0 auto;
+    padding: 74px 110px 84px;
+  }
 }

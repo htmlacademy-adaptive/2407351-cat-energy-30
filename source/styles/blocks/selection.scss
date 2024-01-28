@@ -1,10 +1,36 @@
+.selection__header {
+  padding: 27px 20px 39px;
+
+  @media #{$not-mobile} {
+    padding: 65px 70px 66px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 74px 110px 67px;
+  }
+}
+
 .selection__title {
+  margin-top: 0;
+  margin-bottom: 37px;
   font-size: 36px;
   line-height: 36px;
+
+  @media #{$not-mobile} {
+    margin-bottom: 54px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .selection__description {
+  margin: 0;
   font-family: $secondary-font;
   color: $basic-blank;
   text-transform: uppercase;
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

@@ -1,12 +1,13 @@
-.copyright {
-  width: 100%;
-}
-
 .copyright__link {
   display: flex;
   align-items: center;
   justify-content: space-between;
   --img-fill: #666666;
+
+  @media #{$not-mobile} {
+    justify-content: flex-end;
+    gap: 23px;
+  }
 
   &:hover {
     --img-fill: #{$accent-color};
@@ -19,6 +20,7 @@
 
 .copyright__image {
   fill: var(--img-fill);
+  flex-shrink: 0;
 }
 
 .copyright__text {

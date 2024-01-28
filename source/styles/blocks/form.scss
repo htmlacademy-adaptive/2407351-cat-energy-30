@@ -3,9 +3,78 @@
   font-size: 16px;
 }
 
+.form__cat-info-wrap {
+  @media #{$desktop-only} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: $breakpoint-max-w;
+    margin: 0 auto;
+    padding: 0 110px;
+  }
+}
+
+.form__group {
+  margin: 0;
+
+  @media #{$not-mobile} {
+    margin-bottom: 65px;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 70px;
+  }
+}
+
+.form__group-wrap {
+  @media #{$not-mobile} {
+    padding: 0 70px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 0;
+  }
+}
+
+.form__footer {
+  display: grid;
+  gap: 21px;
+  padding: 32px 20px;
+
+  @media #{$not-mobile} {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 52px 70px 60px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 60px 110px 79px;
+    gap: 80px;
+  }
+}
+
+.form__button {
+  height: fit-content;
+
+  @media #{$not-mobile} {
+    padding: 14px 45px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
 .form__warning {
+  margin: 0;
+  font-family: $primary-font;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
   color: $basic-blank;
+
+  @media #{$not-mobile} {
+    align-self: center;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: left;
+  }
 }

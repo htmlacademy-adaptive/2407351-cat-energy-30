@@ -1,6 +1,28 @@
 .title {
-  margin: 0;
   font-family: $secondary-font;
   color: $basic-blank;
   font-weight: 400;
+
+  &--line-shadow {
+    position: relative;
+    width: fit-content;
+    background-color: $basic-white;
+    box-shadow: -20px 0 0 $basic-white, 20px 0 0 $basic-white;
+
+    @media #{$not-mobile} {
+      box-shadow: -40px 0 0 $basic-white, 40px 0 0 $basic-white;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.63em;
+      right: 0;
+      width: 100vw;
+      height: 2px;
+      background-color: $accent-color;
+      box-shadow: 100vw 0 0 $accent-color;
+      z-index: -1;
+    }
+  }
 }

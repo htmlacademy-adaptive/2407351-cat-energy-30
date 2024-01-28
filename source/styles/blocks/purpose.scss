@@ -1,13 +1,52 @@
 .purpose__wrapper {
   padding: 0 20px;
+
+  @media #{$not-mobile} {
+    margin-bottom: 45px;
+    padding: 0 30px;
+  }
+
+  @media #{$desktop-only} {
+    max-width: $breakpoint-max-w;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 71px;
+    padding: 0 110px;
+  }
+}
+
+.purpose__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media #{$not-mobile} {
+    gap: 30px;
+  }
+
+  @media #{$desktop-only} {
+    flex-direction: row;
+    gap: 80px;
+  }
 }
 
 .purpose__item {
-  padding: 30px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 22px;
   background-color: $basic-grey;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  @media #{$not-mobile} {
+    padding: 77px 63px 57px 52px;
+  }
+
+  @media #{$tablet-only} {
+    min-height: 372px;
+  }
+
+  @media #{$desktop-only} {
+    flex-basis: 50%;
+    padding: 77px 52px 59px 52px;
   }
 
   &--weight-loss {
@@ -16,6 +55,21 @@
     --purpose-icon-w: 36px;
     --purpose-icon-h: 50px;
     --purpose-icon: url("../../images/icons/stack.svg#cat-slim");
+
+    @media #{$tablet-only} {
+      --purpose-icon-top: 4px;
+      --purpose-icon-left: auto;
+      --purpose-icon-right: 30px;
+      --purpose-icon-w: 140px;
+      --purpose-icon-h: 194px;
+    }
+
+    @media #{$desktop-only} {
+      --purpose-icon-top: -36px;
+      --purpose-icon-left: 15px;
+      --purpose-icon-w: 70px;
+      --purpose-icon-h: 97px;
+    }
   }
 
   &--weight-gain {
@@ -24,25 +78,70 @@
     --purpose-icon-w: 67px;
     --purpose-icon-h: 28px;
     --purpose-icon: url("../../images/icons/stack.svg#cat-pro");
+
+    @media #{$tablet-only} {
+      --purpose-icon-top: 58px;
+      --purpose-icon-left: auto;
+      --purpose-icon-right: -34px;
+      --purpose-icon-w: 268px;
+      --purpose-icon-h: 112px;
+    }
+
+    @media #{$desktop-only} {
+      --purpose-icon-top: -10px;
+      --purpose-icon-left: -19px;
+      --purpose-icon-w: 134px;
+      --purpose-icon-h: 56px;
+    }
   }
 }
 
 .purpose__title {
   position: relative;
   margin: 0;
+  margin-bottom: 29px;
   padding-left: 70px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 
+  --purpose-circle-top: -6px;
+  --purpose-circle-left: 0;
+  --purpose-circle-w: 50px;
+
+  @media #{$not-mobile} {
+    margin-bottom: 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media #{$tablet-only} {
+    padding-left: 0;
+    padding-right: 52%;
+
+    --purpose-circle-w: 200px;
+    --purpose-circle-top: 15px;
+    --purpose-circle-left: auto;
+    --purpose-circle-right: 0;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 73px;
+    padding-left: 162px;
+
+    --purpose-circle-top: -30px;
+    --purpose-circle-w: 100px;
+  }
+
   &::before {
     content: "";
     position: absolute;
-    top: -6px;
-    left: 0;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
+    top: var(--purpose-circle-top);
+    left: var(--purpose-circle-left);
+    right: var(--purpose-circle-right);
+    display: block;
+    width: var(--purpose-circle-w);
+    height: var(--purpose-circle-w);
     background-color: $accent-color;
     border-radius: 50%;
   }
@@ -52,6 +151,7 @@
     position: absolute;
     top: var(--purpose-icon-top);
     left: var(--purpose-icon-left);
+    right: var(--purpose-icon-right);
     display: inline-block;
     width: var(--purpose-icon-w);
     height: var(--purpose-icon-h);
@@ -64,10 +164,31 @@
 }
 
 .purpose__description {
+  margin: 0;
+  margin-bottom: 19px;
+
+  --purpose-desc-line: block;
+
+  @media #{$not-mobile} {
+    margin-bottom: 52px;
+    font-size: 16px;
+    line-height: 24px;
+
+    --purpose-desc-line: none;
+  }
+
+  @media #{$tablet-only} {
+    padding-right: 43%;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 27px;
+  }
+
   &::after {
     content: "";
-    display: block;
-    margin: 23px 0 19px;
+    display: var(--purpose-desc-line);
+    margin-top: 22px;
     height: 1px;
     background-color: #d9d9d9;
   }
@@ -75,6 +196,7 @@
 
 .purpose__link-wrapper {
   display: flex;
+  margin-top: auto;
 }
 
 .purpose__link {
@@ -85,7 +207,14 @@
   line-height: 16px;
   text-transform: uppercase;
   color: $basic-blank;
+  --arrow-m: 16px;
   --arrow-pos: -8px;
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+    line-height: 30px;
+    --arrow-m: 26px;
+  }
 
   &:hover {
     --arrow-pos: 0;
@@ -99,7 +228,7 @@
     content: "";
     width: 32px;
     height: 12px;
-    margin-left: 15px;
+    margin-left: var(--arrow-m);
     background-image: url("../../images/icons/stack.svg#arrow-icon");
     background-repeat: no-repeat;
     background-size: contain;
