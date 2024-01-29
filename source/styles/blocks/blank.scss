@@ -143,7 +143,7 @@
   width: 20px;
   height: 20px;
   mask-image: var(--blank-icon-url);
-  // background-color: #222222;
+  background-color: #222222;
 
   @media #{$not-mobile} {
     top: 16px;
@@ -172,7 +172,7 @@
   flex-grow: 1;
   padding-right: var(--blank-input-p-right);
 
-  &:focus-visible + .blank__label {
+  &:focus-visible + .blank__icon {
     background-color: #{$accent-color};
   }
 
