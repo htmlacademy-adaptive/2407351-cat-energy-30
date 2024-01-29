@@ -10,7 +10,6 @@
   @media #{$not-mobile} {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 57px 30px;
 
     --footer-line-display: none;
@@ -25,6 +24,11 @@
 
 .main-footer__logo {
   display: block;
+
+
+  @media #{$not-mobile} {
+    margin: 5px 0 8px;
+  }
 
   &::after {
     content: "";
@@ -44,6 +48,8 @@
 }
 
 .main-footer__social {
+  margin: 7px 0 8px;
+
   @media #{$not-mobile} {
     translate: 13%;
   }

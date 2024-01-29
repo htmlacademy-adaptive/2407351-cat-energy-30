@@ -11,7 +11,7 @@
 }
 
 .slider__image {
-  --slider-bg-color: #{$live-example-color};
+  --slider-bg: #{$live-example-color};
 
   @media #{$not-mobile} {
     --slider-bg: linear-gradient(to bottom, #{$basic-white} 151px, #{$live-example-color} 151px);
@@ -60,7 +60,7 @@
   &:hover {
     background-color: $accent-color;
 
-    & .slider__svg {
+    .slider__svg {
       color: $accent-color;
     }
   }
@@ -69,7 +69,7 @@
     background-color: #5eaa2f;
     opacity: 0.6;
 
-    & .slider__svg {
+    .slider__svg {
       color: #5eaa2f;
     }
   }

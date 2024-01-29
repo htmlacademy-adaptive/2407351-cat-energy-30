@@ -9,7 +9,8 @@
     gap: 23px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     --img-fill: #{$accent-color};
   }
 

@@ -9,6 +9,8 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/Oswald-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=b741650d-aeca-472d-a761-ce8550b60bb1&lang=ru_RU" defer></script>
 </head>
@@ -65,15 +67,15 @@
           <div class="form__group blank blank--cat-info" aria-labelledby="cat-info" role="group">
             <div class="visually-hidden" id="cat-info">Основная информация о питомце</div>
             <label class="blank__row">
-              Имя:*
+              <span class="blank__label">Имя:*</span>
               <input class="blank__input input-text" type="text" name="cat-name" value="Барсик" required>
             </label>
             <label class="blank__row">
-              Вес (кг):*
+              <span class="blank__label">Вес (кг):*</span>
               <input class="blank__input input-text" type="number" name="cat-weight" value="7" required>
             </label>
             <label class="blank__row">
-              Возраст (лет):
+              <span class="blank__label">Возраст (лет):</span>
               <input class="blank__input input-text" type="number" name="cat-age" value="7">
             </label>
           </div>
@@ -109,17 +111,21 @@
         </div>
         <div class="form__group blank blank--owner" aria-labelledby="owner" role="group">
           <div class="blank__title title title--line-shadow" id="owner">Контактные данные <br>(владельца&nbsp;кота)</div>
-          <label class="blank__row blank__row--email">E-mail:*
+          <label class="blank__row">
+            <span class="blank__label">E-mail:*</span>
             <input class="blank__input input-text" type="email" name="email" value="kuklachev@gmail.com" required>
+            <span class="blank__icon blank__icon--email"></span>
           </label>
-          <label class="blank__row blank__row--tel">Телефон:*
+          <label class="blank__row">
+            <span class="blank__label">Телефон:*</span>
             <input class="blank__input input-text" type="tel" name="phone-number" value="8 (960) 900-60-90" required>
+            <span class="blank__icon blank__icon--tel"></span>
           </label>
         </div>
 
         <div class="form__group blank blank--review" aria-labelledby="review" role="group">
           <div class="blank__title title title--line-shadow" id="review">Комментарий</div>
-          <textarea class="blank__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="blank__textarea" name="comment" placeholder="Расскажите обо всех повадках кота" aria-label="Расскажите обо всех повадках кота."></textarea>
         </div>
 
         <div class="form__group blank blank--more" aria-labelledby="more-product" role="group">
