@@ -100,6 +100,8 @@
   height: 100%;
   background-image:
     image-set(
+      url("../../images/map-phone@1x.webp") type("image/webp") 1x,
+      url("../../images/map-phone@2x.webp") type("image/webp") 2x,
       url("../../images/map-phone@1x.png") type("image/png") 1x,
       url("../../images/map-phone@2x.png") type("image/png") 2x
     );
@@ -111,6 +113,8 @@
     max-height: 400px;
     background-image:
       image-set(
+        url("../../images/map-tablet@1x.webp") type("image/webp") 1x,
+        url("../../images/map-tablet@2x.webp") type("image/webp") 2x,
         url("../../images/map-tablet@1x.png") type("image/png") 1x,
         url("../../images/map-tablet@2x.png") type("image/png") 2x
     );
@@ -119,8 +123,10 @@
   @media #{$desktop-only} {
     background-image:
       image-set(
-      url("../../images/map-desktop@1x.png") type("image/png") 1x,
-      url("../../images/map-desktop@2x.png") type("image/png") 2x
+        url("../../images/map-desktop@1x.webp") type("image/webp") 1x,
+        url("../../images/map-desktop@2x.webp") type("image/webp") 2x,
+        url("../../images/map-desktop@1x.png") type("image/png") 1x,
+        url("../../images/map-desktop@2x.png") type("image/png") 2x
     );
     background-position: center 0;
   }
