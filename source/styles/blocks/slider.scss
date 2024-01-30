@@ -23,7 +23,7 @@
     --slider-bg: linear-gradient(to bottom, #{$basic-white} 135px, #{$basic-grey} 135px);
   }
 
-  & img {
+  img {
     height: 100%;
     width: 100%;
   }
@@ -37,7 +37,7 @@
     background: var(--slider-bg);
     overflow: hidden;
 
-    & img {
+    img {
       object-fit: cover;
       object-position: left;
     }
