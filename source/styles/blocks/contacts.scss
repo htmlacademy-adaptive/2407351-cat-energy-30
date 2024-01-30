@@ -108,6 +108,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: $basic-grey-darkness;
 
   @media #{$not-mobile} {
     max-height: 400px;
