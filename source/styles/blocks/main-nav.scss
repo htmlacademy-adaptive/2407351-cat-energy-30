@@ -37,7 +37,6 @@
 
   @media #{$not-mobile} {
     position: relative;
-    // width: 70%;
     width: fit-content;
     z-index: 0;
 
@@ -84,7 +83,6 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
-
 
   @media #{$not-mobile} {
     flex-direction: row;
@@ -142,6 +140,18 @@
       width: 100%;
       margin-top: 7px;
       background-color: var(--link-current-color);
+      opacity: 0;
+      animation: ani 1.5s forwards;
+    }
+
+    @keyframes ani {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     @media #{$mobile-only} {
