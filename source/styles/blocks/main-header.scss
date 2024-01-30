@@ -19,8 +19,10 @@
 
     --bg-cat-img:
       image-set(
-      url("../../images/index-background-phone@1x.jpg") type("image/jpeg") 1x,
-      url("../../images/index-background-phone@2x.jpg") type("image/jpeg") 2x);
+        url("../../images/index-background-phone@1x.webp") type("image/webp") 1x,
+        url("../../images/index-background-phone@2x.2webp") type("image/webp") 2x,
+        url("../../images/index-background-phone@1x.jpg") type("image/jpeg") 1x,
+        url("../../images/index-background-phone@2x.jpg") type("image/jpeg") 2x);
     --bg-cat-sz: static;
     --bg-cat-pos: center;
     --bg-cat-display: block;
@@ -35,6 +37,8 @@
     @media #{$desktop-only} {
       --bg-cat-img:
         image-set(
+          url("../../images/index-background-desktop@1x.webp") type("image/webp") 1x,
+          url("../../images/index-background-desktop@2x.webp") type("image/webp") 2x,
           url("../../images/index-background-desktop@1x.jpg") type("image/jpeg") 1x,
           url("../../images/index-background-desktop@2x.jpg") type("image/jpeg") 2x);
       --bg-cat-sz: static;

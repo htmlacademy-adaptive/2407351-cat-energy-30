@@ -54,8 +54,10 @@
   background-image:
     linear-gradient(rgba($accent-color, 0.85) 0%, rgba($accent-color, 0.85) 100%),
     image-set(
-    url("../../images/cat-backpack-phone@1x.jpg") type("image/jpeg") 1x,
-    url("../../images/cat-backpack-phone@2x.jpg") type("image/jpeg") 2x
+      url("../../images/cat-backpack-phone@1x.webp") type("image/webp") 1x,
+      url("../../images/cat-backpack-phone@2x.webp") type("image/webp") 2x,
+      url("../../images/cat-backpack-phone@1x.jpg") type("image/jpeg") 1x,
+      url("../../images/cat-backpack-phone@2x.jpg") type("image/jpeg") 2x
   );
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,8 +84,10 @@
     background-image:
       linear-gradient(rgba($accent-color, 0.85) 0%, rgba($accent-color, 0.85) 100%),
       image-set(
-      url("../../images/cat-backpack-tablet@1x.jpg") type("image/jpeg") 1x,
-      url("../../images/cat-backpack-tablet@2x.jpg") type("image/jpeg") 2x
+        url("../../images/cat-backpack-tablet@1x.webp") type("image/webp") 1x,
+        url("../../images/cat-backpack-tablet@2x.webp") type("image/webp") 2x,
+        url("../../images/cat-backpack-tablet@1x.jpg") type("image/jpeg") 1x,
+        url("../../images/cat-backpack-tablet@2x.jpg") type("image/jpeg") 2x
     );
 
     --products-gift-m-bottom: 0;
@@ -96,8 +100,10 @@
     background-image:
       linear-gradient(rgba($accent-color, 0.85) 0%, rgba($accent-color, 0.85) 100%),
       image-set(
-      url("../../images/cat-backpack-desktop@1x.jpg") type("image/jpeg") 1x,
-      url("../../images/cat-backpack-desktop@2x.jpg") type("image/jpeg") 2x
+        url("../../images/cat-backpack-desktop@1x.jpg") type("image/webp") 1x,
+        url("../../images/cat-backpack-desktop@2x.jpg") type("image/webp") 2x,
+        url("../../images/cat-backpack-desktop@1x.jpg") type("image/jpeg") 1x,
+        url("../../images/cat-backpack-desktop@2x.jpg") type("image/jpeg") 2x
       );
   }
 
